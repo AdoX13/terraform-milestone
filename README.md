@@ -1,16 +1,13 @@
 Terraform project for DevOps learning @ Nagarro
 
-Deployment:
+How to deploy:  
+`./deploy.sh DEV/PROD`
 
-1. Go to `live/DEV/network` or `live/PROD/network`  
-2. Use the following commands:  
-	`terraform init`  
-	`terraform apply -auto-approve`  
-3. Go to `live/DEV/data-storage` or `live/PROD/data-storage`
-4. Use the following commands:
-	`terraform init`  
-	`terraform apply -auto-approve`
-5. Go to `live/DEV/services` or `live/PROD/services`
-6. Use the following commands:  
-	`terraform init`  
-	`terraform apply -auto-approve`
+How to destroy:  
+`./destroy.sh DEV/PROD`
+
+
+
+TODOS:
+1. Connect `bastion-host` to `ec2-main` and access webapp from there
+2. Jenkinsfile
