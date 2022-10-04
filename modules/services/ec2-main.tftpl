@@ -1,0 +1,19 @@
+#!/bin/bash
+                
+sudo yum -y update
+sudo yum -y install git
+sudo yum -y install maven
+sudo yum -y install httpd
+sudo yum -y install https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+
+sudo systemctl enable --now httpd.service
+sudo systemctl enable --now amazon-ssm-agent
+
+git clone https://github.com/RevianLabs/devops-webapp-sample
+export DB_URL="jdbc:mysql://${database_address}:${database_port}/${database_name}"
+export DB_USER="${database_username}"
+export DB_PASS="${database_password}"
+cd devops-webapp-sample
+mvn clean package
+cd target
+nohup java -jar devops-webapp-sample-1.0.0.jar &
