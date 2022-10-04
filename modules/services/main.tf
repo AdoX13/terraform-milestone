@@ -70,7 +70,7 @@ resource "aws_instance" "ec2-bastion-host" {
 # INSTANCE PROFILE
 
 resource "aws_iam_instance_profile" "profile" {
-    name = "ms5-apopa-${var.env}-profile"
+    name = "ms5-apopa-${var.env}-profile-b"
     role = aws_iam_role.role.name
 }
 

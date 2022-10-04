@@ -1,10 +1,7 @@
 Terraform project for DevOps learning @ Nagarro
 
 How to deploy:  
-`./deploy.sh DEV/PROD`
-
-How to destroy:  
-`./destroy.sh DEV/PROD`
+`./deploy.sh DEV/PROD create/destroy`
 
 
 
