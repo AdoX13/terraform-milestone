@@ -8,6 +8,10 @@ if [[ "$env" != "DEV" && "$env" != "PROD" && "$action" != "create" && "$action" 
 	exit 1
 fi
 
+cd live/global/s3
+terraform init
+terraform apply -auto-approve
+
 if [[ "$action" == "create" ]]
 then
 	# Deploy network
