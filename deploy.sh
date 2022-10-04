@@ -25,11 +25,14 @@ then
 else
 	# Destroy services
 	cd live/$env/services
+	terraform init
 	terraform apply -destroy -auto-approve
 	# Destroy data-storage
 	cd ../data-storage
+	terraform init
 	terraform apply -destroy -auto-approve
 	# Dstroy network
 	cd ../network
+	terraform init
 	terraform apply -destroy -auto-approve
 fi
