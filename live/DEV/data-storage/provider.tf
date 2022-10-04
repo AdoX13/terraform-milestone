@@ -3,7 +3,12 @@ provider "aws" {
 }
 
 terraform {
-    backend "local" {
-        path = "./terraform.tfstate"
+    backend "s3" {
+        bucket = "ms5-apopa-tf-state"
+        key = "DEV/data-storage/terraform.tfstate"
+        region = "eu-central-1"
+
+        dynamodb_table = "ms5-apopa-tf-locks"
+        encrypt = true
     }
 }

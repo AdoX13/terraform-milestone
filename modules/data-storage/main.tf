@@ -1,9 +1,10 @@
 # Terraform remote states
 data "terraform_remote_state" "network" {
-    backend = "local"
- 
+    backend = "s3"
     config = {
-        path = "../network/terraform.tfstate"
+        bucket = "ms5-apopa-tfstate"
+        key = "DEV/network/terraform.tfstate"
+        region = "eu-central-1"
     }
 }
 
