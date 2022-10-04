@@ -11,6 +11,6 @@ Deployment:
 	`terraform init`  
 	`terraform apply -auto-approve`
 5. Go to `live/DEV/services` or `live/PROD/services`
-6. Use the following commands:
+6. Use the following commands:  
 	`terraform init`  
 	`terraform apply -auto-approve`
