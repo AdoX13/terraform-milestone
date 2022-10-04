@@ -37,7 +37,7 @@ else
 	terraform init
 	terraform apply -destroy -auto-approve
 	# Destroy network
-	terraform init
 	cd ../network
+	terraform init
 	terraform apply -destroy -auto-approve
 fi
