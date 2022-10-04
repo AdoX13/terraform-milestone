@@ -7,6 +7,5 @@ How to deploy:
 
 TODOS:
 1. Connect `bastion-host` to `ec2-main` and access webapp from there
-2. Jenkinsfile
-3. Generate database secured password and use aws secret manager
-4. USE VARIABLES FFS
+2. Generate database secured password and use aws secret manager
+3. USE VARIABLES FFS
