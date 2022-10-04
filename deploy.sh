@@ -11,11 +11,12 @@ fi
 cd live/global/s3
 terraform init
 terraform apply -auto-approve
+cd ../../
 
 if [[ "$action" == "create" ]]
 then
 	# Deploy network
-	cd live/$env/network
+	cd $env/network
 	terraform init
 	terraform apply -auto-approve
 	# Deploy data-storage
@@ -28,7 +29,7 @@ then
 	terraform apply -auto-approve
 else
 	# Destroy services
-	cd live/$env/services
+	cd $env/services
 	terraform apply -destroy -auto-approve
 	# Destroy data-storage
 	cd ../data-storage
